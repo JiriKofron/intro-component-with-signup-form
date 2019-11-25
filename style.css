@@ -1,10 +1,12 @@
 :root {
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%);
+    --green-border: hsl(154, 49%, 45%);
     --blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%);
     --grayish-blue: hsl(246, 25%, 77%);
-
+    --shadow-red: hsl(0, 56%, 61%);
+    --gray-border: rgb(224, 214, 214);
 }
 
 body {font-family: "Poppins", sans-serif;
@@ -16,14 +18,14 @@ body {font-family: "Poppins", sans-serif;
     text-align: center;
     min-width: 375px;
     max-width: 1440px;
+    overflow-x: hidden;
 }
 
 .page_container {
-    border: 1px solid red;
     background: rgba(255, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    padding: 0 1.3rem;
+    padding: 0 1.5rem;
 }
 
 .header {
@@ -48,13 +50,15 @@ p {
 }
 
 .btn_action{
+    box-sizing: border-box;
+    width: 100%;
     margin: 0;
     background: var(--blue);
     color: white;
     border: none;
     border-radius: 0.5rem;
     padding: 1rem;
-    box-shadow: 0px 10px 5px 0px var(--dark-blue);
+    box-shadow: 0px 7px 2px 0px var(--shadow-red);
 }
 
 .btn_action p {
@@ -63,4 +67,77 @@ p {
     padding: 0 3rem;
     font-weight: 400;
     font-size: 0.9rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 7px 2px 0px var(--shadow-red);
+}
+
+input:first-of-type {
+    margin-top: 1.5rem;
+}
+
+input {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    width: 85%;
+    height: 3rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 0.2rem;
+}
+
+input:focus {
+    border: 1px solid black;
+}
+
+.btn_submit {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-sizing: border-box;
+    width: 85%;
+    background: var(--green);
+    border: none;
+    box-shadow: 0px 1px 1px 3px var(--green-border);
+    color: white;
+}
+
+form p {
+    font-size: 0.7rem;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--grayish-blue);
+    line-height: 1.5rem;
+}
+
+form a {
+    color: var(--red);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 720px) {
+    .page_container {
+        flex-direction: row;
+    }
+
+    .header {
+        width: 49%;
+    }
+
+    .forms_container {
+        margin-top;
+        width: 49%;
+    }
 }
