@@ -25,17 +25,17 @@
   but understanding how developers think is invaluable.</p> 
 </div>
 <div class="forms_container">
-  <button class="btn_action"><p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+  <button class="btn_action"><span><strong>Try it free 7 days</strong> then $20/mo. thereafter</span>
   </button>
 <!--přidat divy na error zprávy, sem nebo do js-->
 <form id="form" novalidate>
-  <input id="firstName" name="name" type="text"  placeholder="First Name" required>
+  <input id="firstName" name="name" type="text"  placeholder="First Name" title="Input your First name"  required>
   <div class="form_error"><em>First Name cannot be empty</em></div>
-  <input id="lastName" name="lastName" type="text" placeholder="Last Name" required>
+  <input id="lastName" name="lastName" type="text" placeholder="Last Name" title="Input your Last name" required>
   <div class="form_error"><em>Last Name cannot be empty</em></div>
-  <input id="email" name="email" type="email" placeholder="Email Address" required>
+  <input id="email" name="email" type="email" placeholder="Email Address" title="Input your email" required>
   <div class="form_error"><em>Looks like this is not an email</em></div>
-  <input id="password" name="password" type="password" placeholder="Password" required>
+  <input id="password" name="password" type="password" placeholder="Password" title="Input any password" required>
   <div class="form_error"><em>Password cannot be empty</em></div>
   <input id="formSubmit" class="btn_submit" name="submit" type="submit" value="Claim your free trial">
   <p>
